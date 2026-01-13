@@ -17,6 +17,7 @@
     $numerocondecimales= 13.4;
     $array =array(1,2,3,4);
 
+    // Conversión y comprobación de tipos
     echo $frase;
     echo "</br>";
     echo gettype($frase);
@@ -27,6 +28,7 @@
     echo is_array($array);
     echo "</br>";
 
+    //constantes
     define ("nombre_constante",123);
     const const1 ="hola";
     echo constant("nombre_constante");

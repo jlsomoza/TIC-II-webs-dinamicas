@@ -19,7 +19,7 @@
     $res=false;
 
    
-
+    //Operadores de comparación
     echo "El saldo numérico es igual al saldo en texto?";
     $res = ($saldo == $saldo_texto);
     echo $res?" Sí<br>":" No<br>";
@@ -40,7 +40,7 @@
     
 
   
-    
+    // Operadores lógicos
     $valor=false;
     $valor2=true;
     $res=0;

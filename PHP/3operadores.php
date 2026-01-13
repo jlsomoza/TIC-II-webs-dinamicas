@@ -34,6 +34,9 @@
     echo "El saldo de duplicar su valor sería de $saldo";
     echo "Operadores lógicos";
 
+
+    //Operadores lógicos
+    
     //Declaración de variables
     $estudia=true;
     $trabaja=true;
