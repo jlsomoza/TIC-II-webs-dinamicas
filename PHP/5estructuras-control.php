@@ -129,6 +129,11 @@
       echo "<br>";
     }
 
+    foreach ($alumnado as $alumno) {
+      echo($alumno);
+      echo "<br>";
+    }
+
     $bienvenida1="Bienvenido al Bar tolo";
     $menu="Aquí podrá degustar varios menús";
     $pregunta="'¿Quiere probar los \'Tolines\'?'";
