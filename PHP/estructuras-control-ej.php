@@ -30,8 +30,49 @@
         }
     }
 
+    $pares=0;
+    $contador=0;
+
+    while ($pares <= 50) {
+        if($contador %2==0){
+            $pares++;
+            echo("$contador <br>");
+        }
+        $contador++;
+    }
+
+    $pares=0;
+    $contador=0;
+
+
+    do {
+        # code...
+        if($contador %2==0){
+            $pares++;
+            echo("$contador <br>");
+        }
+        $contador++;
+    } while ($pares <= 50);
+
  
 
+    // Ejercico for
+
+    $contador = 0;   // Contador, comienza en 0
+    $suma = 0;       // Variable para guardar la suma
+    
+    for ($i = 0; $i < 100; $i++) {
+        $suma += $contador;
+        $contador += 2;  // Pasamos al siguiente número par
+    }
+    
+    echo "La suma de los 100 primeros números pares es: " . $suma;
+
+    $meses = array('enero','febrero','marzo','abril','mayo');
+
+    foreach ($meses as $key => $value) {
+        echo("$value <br>");
+    }
 
   ?>
 </body>
