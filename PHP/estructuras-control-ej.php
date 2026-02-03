@@ -30,49 +30,36 @@
         }
     }
 
-    $pares=0;
-    $contador=0;
 
-    while ($pares <= 50) {
-        if($contador %2==0){
-            $pares++;
-            echo("$contador <br>");
-        }
-        $contador++;
-    }
-
-    $pares=0;
-    $contador=0;
-
-
-    do {
-        # code...
-        if($contador %2==0){
-            $pares++;
-            echo("$contador <br>");
-        }
-        $contador++;
-    } while ($pares <= 50);
-
- 
-
-    // Ejercico for
-
-    $contador = 0;   // Contador, comienza en 0
-    $suma = 0;       // Variable para guardar la suma
+    /*
     
-    for ($i = 0; $i < 100; $i++) {
-        $suma += $contador;
-        $contador += 2;  // Pasamos al siguiente número par
-    }
-    
-    echo "La suma de los 100 primeros números pares es: " . $suma;
 
-    $meses = array('enero','febrero','marzo','abril','mayo');
+    */
 
-    foreach ($meses as $key => $value) {
-        echo("$value <br>");
+
+    $aceleracion = 5; 
+
+    switch ($aceleracion) {
+        case ($aceleracion >= 0 && $aceleracion <= 2):
+            echo "Hay que aumentar la velocidad.";
+            break;
+
+        case ($aceleracion == 3):
+            echo "Le falta algo de aceleración.";
+            break;
+
+        case ($aceleracion >= 4 && $aceleracion <= 7):
+            echo "La aceleración es perfecta.";
+            break;
+
+        case ($aceleracion >= 8 && $aceleracion <= 9):
+            echo "Hay que decelerar por peligro de destrucción.";
+            break;
+
+        default:
+            echo "La cifra no está contemplada.";
     }
+
 
   ?>
 </body>
