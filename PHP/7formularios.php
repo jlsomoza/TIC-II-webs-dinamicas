@@ -12,6 +12,10 @@
     <h1>Hola PHP </h1>
     
   <?php
+
+    require_once "conexion.php";
+    
+
     echo "El usuario es:";
     echo $_POST["usuario"];
     echo "</br>";
@@ -51,8 +55,30 @@
     } else {
         echo "No se ha enviado ninguna imagen.";
     }
+    
+/*
+    $sql = "INSERT INTO usuarios (nombre, pass) VALUES (:nombre, :pass)";
+
+    $stmt = $pdo->prepare($sql);
+
+    $nome  = $_POST["usuario"];
+    $email = $_POST["pass"];
+
+    $stmt->bindParam(":nombre", $nome);
+    $stmt->bindParam(":pass", $email);
+
+    $stmt->execute();
+
+    echo "Rexistro inserido correctamente";
+
+    */
 
 
+    $sql = "INSERT INTO usuarios (nombre, pass) VALUES (?, ?)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$_POST["usuario"] ,$_POST["pass"]]);
+
+    echo "Rexistro inserido correctamente";
 
 ?>
 </body>

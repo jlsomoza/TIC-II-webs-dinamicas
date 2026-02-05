@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Formulario red social</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <form method="POST" action="http://localhost/TIC-II/PHP/formulario-red-social.php" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>Formulario red social</legend>
+            <fieldset>
+                <legend>Datos necesarios para el registro</legend>
+                <p>
+                    Usuario:
+                    <input type="text" name="usuario" maxlength="10" size="20" placeholder="Introduzca el usuario">
+                </p>
+                <p>
+                    Pasword:
+                    <input type="password" name="pass" maxlength="8" size="20" placeholder="Introduzca la contraseña">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Datos de interés</legend>
+                <p>
+                    Tratamiento:
+                </p>
+                <p>
+                    <input type="radio" name="tratamiento" value="sr">Sr
+                    <br>
+                    <input type="radio" name="tratamiento" value="sra">Sra
+                    <br>
+                    <input type="radio" name="tratamiento" value="srata">Srta
+                    <br>
+                </p>
+                <p>
+                    Nombre:
+                    <input type="text" name="nombre" maxlength="20" size="20" placeholder="Introduzca el nombre">
+                </p>
+                <p>
+                    Apellidos:
+                    <input type="text" name="apellidos" maxlength="40" size="50" placeholder="Introduzca los apellidos">
+                </p>
+
+                <p>
+                    Edad:
+                </p>
+                <p>
+                    <input type="radio" name="edad" value="0-10">0-10
+                    <br>
+                    <input type="radio" name="edad" value="11-30">11-30
+                    <br>
+                    <input type="radio" name="edad" value="31-50">31-50
+                    <br>
+                    <input type="radio" name="edad" value="50+">50+
+                    <br>
+                </p>
+
+                <p>
+                    Tipo Cuenta:
+                </p>
+                <p>
+                    <input type="radio" name="tipo_cuenta" value="normal">Normal
+                    <br>
+                    <input type="radio" name="tipo_cuenta" value="premium">Premium
+                    <br>
+                </p>
+
+                <p>
+                    Aficiones:
+                </p>
+                <p>
+                    <input type="checkbox" name="aficion1" value="pesca">Pesca
+                    <br>
+                    <input type="checkbox" name="aficion2" value="musica">Música
+                    <br>
+                    <input type="checkbox" name="aficion3" value="viajes">Viajes
+                    <br>
+                    <input type="checkbox" name="aficion4" value="comida">Comida
+                    <br>
+                </p>
+
+                <p>
+                    Vehículo:
+                </p>
+
+
+                <p>
+                    <input type="checkbox" name="vehiculo1" value="coche">Coche
+                    <br>
+                    <input type="checkbox" name="vehiculo2" value="moto">Moto
+                    <br>
+                    <input type="checkbox" name="vehiculo3" value="patinete">Patinete
+                    <br>
+                    <input type="checkbox" name="vehiculo4" value="bicicleta">Bicicleta
+                </p>
+
+
+                <p>Descripción:</p>
+
+                <br>
+                <textarea name="descripcion" cols="50" rows="10"></textarea>
+                <br>
+
+                <p>Idiomas:</p>
+
+                <p>
+                    <select multiple name="idiomas[]">
+                        <option value="español">Español</option>
+                        <option value="inglés">Inglés</option>
+                        <option value="francés">Francés</option>
+                        <option value="alemán">Alemán</option>
+                    </select>
+                </p>
+
+                <p>Mensajes:</p>
+
+                <p>
+                    <select name="n_mensajes">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                </p>
+            </fieldset>
+        </fieldset>
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="borrar">
+        </p>
+
+    </form>
+</body>
+
+</html>
