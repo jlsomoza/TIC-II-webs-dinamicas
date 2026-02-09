@@ -13,6 +13,7 @@
     
   <?php
 
+    require_once "conexion_bd.php";
 
     if (!empty($_POST["usuario"])) {
         echo "El usuario es:";
@@ -132,6 +133,16 @@
         echo $_POST["n_mensajes"];
         echo "</br>";
     }
+
+    // 🔐 Hash seguro de la contraseña
+    $passwordHash = password_hash($_POST["pass"], PASSWORD_DEFAULT);
+
+    $sql = "INSERT INTO usuarios (nombre, pass) VALUES (?, ?)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$_POST["usuario"] ,$passwordHash]);
+    
+
+    echo "Usuario registrado correctamente <br>";
 
     echo "<a href='http://localhost/TIC-II/PHP/formulario-red-social.html'>Volver al formulario</a>";
 

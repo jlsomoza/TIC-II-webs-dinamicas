@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio14.css">
+    <title>Ejercicio 14</title>
+</head>
+
+<body>
+    <h2>Rellena tu CV</h2>
+    <form method="post" action="http://localhost/TIC-II/PHP/prueba/formulario-cv.php">
+
+
+        <fieldset>
+            <legend>Datos personales</legend>
+
+
+
+            <div>
+                <label for="name">Nombre</label>
+                <input type="text" name="nombre" maxlength="30" placeholder="Introduzaca su nombre">
+            </div>
+
+            <div>
+                <label for="name2">Apellidos</label>
+                <input type="text" name="apellidos" maxlength="80" placeholder="Introduzaca sus apellidos">
+            </div>
+
+            <div class="box" style="margin-top:20px;">
+                <label for="id" style="clear: both;float: left; margin-right: 10px;">Email</label>
+                <input type="email" name="id" pattern="[0-9]{8}[A-Za-z]{1}" placeholder="Indroduzca su email">
+            </div>
+
+
+            <div>
+                <label for="pswd" style="clear: both;float: left; margin-right: 10px; width: 310px;" placeholder="Al menos 8 caracteres, una letra mayuscula, y dígito">Contraseña</label>
+                <input type="password" name="pswd" maxlength="10" placeholder="Al menos 8 caracteres">
+            </div>
+
+
+            <div class="box">
+                <label for="gender">Sexo</label>
+                <input type="radio" name="gender">Hombre</input>
+                <br>
+                <input type="radio" name="gender">Mujer</input>
+            </div>
+
+            <div>
+                <label for="photo">Incluir mi foto</label>
+                <input type="file" accept="image/*">
+            </div>
+            <div>
+                <label for="selector" style="clear: both;float: left; margin-right: 10px;">Provincia</label>
+                <select name="selector">
+                    <option value="A Coruña">A Coruña</option>
+                    <option value="Lugo">Lugo</option>
+                    <option value="Ourense">Ourense</option>
+                    <option value="Pontevedra">Pontevedra</option>
+                </select>
+            </div>
+
+
+            <p>Temas de interés:</p>
+            <p>
+                <select multiple name="temas[]">
+                    <option value="administración de base de datos">Administración de base de datos
+                    </option>
+                    <option value="análisis y programación">Análisis y programacion
+                    </option>
+                    <option value="arquitectura">Arquitectura</option>
+                    <option value="calidad">Calidad</option>
+                    <option value="ERP, CRM, Inteligencia de negocio">ERP, CRM, Business Intelligence
+                    </option>
+
+                </select>
+            </p>
+
+
+
+            <div>
+                <p>Descripción de destrezas personales:</p>
+
+                <textarea name="descripcion" cols="50" rows="10"></textarea>
+                <br>
+            </div>
+
+
+        </fieldset>
+        <div>
+            <input type="checkbox" name="novedades" checked> Suscribirme al boletin de novedades.
+        </div>
+
+        <div>
+            <button type="submit">Guardar cambios</button>
+            <button type="reset">Borrar los datos introducidos</button>
+        </div>
+    </form>
+</body>
+
+</html>

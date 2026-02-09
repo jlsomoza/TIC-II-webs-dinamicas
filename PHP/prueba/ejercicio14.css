@@ -1,0 +1,18 @@
+div { margin-bottom: 10px; }
+
+.box label { display: block; }
+
+form div:last-of-type { margin-top: 20px; }
+
+
+fieldset { width: 400px; }
+
+fieldset > div { margin-bottom: 20px; }
+
+div > label { display: block; }
+
+div.fecha input:first-of-type { width: 30px; }
+
+div.fecha input:last-of-type { width: 40px; }
+
+textarea { resize: none; }

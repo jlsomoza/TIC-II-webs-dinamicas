@@ -74,9 +74,13 @@
     */
 
 
+
+     // 🔐 Hash seguro de la contraseña
+     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
     $sql = "INSERT INTO usuarios (nombre, pass) VALUES (?, ?)";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$_POST["usuario"] ,$_POST["pass"]]);
+    $stmt->execute([$_POST["usuario"] ,$passwordHash]);
 
     echo "Rexistro inserido correctamente";
 
